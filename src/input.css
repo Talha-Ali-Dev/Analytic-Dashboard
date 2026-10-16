@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+
+:root {
+    /* Backgrounds */
+    --color-bg: #080d19;
+    --color-surface: #111b2d;
+    --color-surface-elevated: #18243a;
+    --color-surface-hover: #202d46;
+
+    /* Text */
+    --color-text: #f8fafc;
+    --color-text-secondary: #b8c5da;
+    --color-text-muted: #77869f;
+
+    /* Accents */
+    --color-primary: #6285ff;
+    --color-purple: #9858f5;
+    --color-success: #20d6a0;
+    --color-cyan: #32c8f5;
+    --color-warning: #ffb547;
+    --color-danger: #f87171;
+
+    /* Glass */
+    --glass-bg: rgba(22, 33, 54, 0.62);
+    --glass-border: rgba(148, 163, 184, 0.18);
+    --glass-highlight: rgba(255, 255, 255, 0.07);
+    --glass-blur: 16px;
+
+    /* Borders and shadows */
+    --border-subtle: rgba(148, 163, 184, 0.12);
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.20);
+    --shadow-glow-blue: 0 0 24px rgba(98, 133, 255, 0.15);
+
+    /* Radius */
+    --radius-sm: 8px;
+    --radius-control: 10px;
+    --radius-card: 16px;
+    --radius-sidebar: 16px;
+
+    /* Spacing */
+    --page-padding: 28px;
+    --card-padding: 20px;
+    --section-gap: 20px;
+
+    /* Typography */
+    --font-family: "Inter", sans-serif;
+    --text-page-title: 28px;
+    --text-kpi: 27px;
+    --text-body: 14px;
+    --text-label: 12px;
+}
+
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+}
+
+.glass-card:hover {
+    border-color: rgba(148, 163, 184, 0.28);
+}
+
+.glass-card:focus-within {
+    border-color: rgba(98, 133, 255, 0.5);
+}
