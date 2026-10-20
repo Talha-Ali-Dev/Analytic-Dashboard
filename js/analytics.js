@@ -7,6 +7,7 @@ import { orders } from "./data.js";
 const revenue = document.querySelector(".total-price");
 const totalOrders = document.querySelector(".total-orders");
 const averageOrder = document.querySelector(".average-value");
+const uniqueCustomer = document.querySelector(".unique-customers");
 
 let totalPrice = 0;
 orders.forEach((order) => {
@@ -16,19 +17,18 @@ orders.forEach((order) => {
     }
   });
 });
+
+let averageValue = orders.filter((order) => order.status === "completed");
+let uniCustomer = orders
+  .filter((order) => order.status === "completed")
+  .map((order) => order.customer);
+
 revenue.innerText = Number(totalPrice).toLocaleString();
 totalOrders.innerText = orders.length;
-
-let averageValue = orders.filter((order)=> order.status === "completed")
-
 averageOrder.innerText = Math.round(totalPrice / averageValue.length);
-
-
+uniqueCustomer.innerText = uniCustomer.length;
 
 // revpercent-res
-// total-orders
-// average-value
 // avgorder-res
-// unique-customers
 // unqcus-res
 // totalorder-res
