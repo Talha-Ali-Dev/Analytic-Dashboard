@@ -1,13 +1,10 @@
 import { orders } from "./data.js";
 
-// orders.forEach((order) => {
-//   // console.log(order);
-// });
-
 const revenue = document.querySelector(".total-price");
 const totalOrders = document.querySelector(".total-orders");
 const averageOrder = document.querySelector(".average-value");
 const uniqueCustomer = document.querySelector(".unique-customers");
+const productDetails = document.querySelector(".products-details");
 
 let totalPrice = 0;
 orders.forEach((order) => {

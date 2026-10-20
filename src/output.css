@@ -584,8 +584,20 @@
   .opacity-25 {
     opacity: 25%;
   }
+  .shadow {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-md {
+    --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-sm {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-xl {
@@ -599,6 +611,54 @@
   .ring-1 {
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[\#20D6A0\] {
+    --tw-shadow-color: #20D6A0;
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, #20D6A0 var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-\[\#20D6A0\]\/5 {
+    --tw-shadow-color: color-mix(in srgb, #20D6A0 5%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, #20D6A0 5%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-\[\#32C8F5\]\/5 {
+    --tw-shadow-color: color-mix(in srgb, #32C8F5 5%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, #32C8F5 5%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-\[\#32C8F5\]\/20 {
+    --tw-shadow-color: color-mix(in srgb, #32C8F5 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, #32C8F5 20%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-\[\#9858F5\]\/5 {
+    --tw-shadow-color: color-mix(in srgb, #9858F5 5%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, #9858F5 5%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-\[\#FFB547\]\/5 {
+    --tw-shadow-color: color-mix(in srgb, #FFB547 5%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, #FFB547 5%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-\[\#FFB547\]\/10 {
+    --tw-shadow-color: color-mix(in srgb, #FFB547 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, #FFB547 10%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-\[\#FFB547\]\/20 {
+    --tw-shadow-color: color-mix(in srgb, #FFB547 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, #FFB547 20%, transparent) var(--tw-shadow-alpha), transparent);
+    }
   }
   .ring-white {
     --tw-ring-color: var(--color-white);
@@ -709,6 +769,62 @@
     }
     .hover\:text-white:hover {
       color: var(--color-white);
+    }
+    .hover\:shadow-\[\#20D6A0\]:hover {
+      --tw-shadow-color: #20D6A0;
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:shadow-\[\#20D6A0\]:hover {
+        --tw-shadow-color: color-mix(in oklab, #20D6A0 var(--tw-shadow-alpha), transparent);
+      }
+    }
+    .hover\:shadow-\[\#20D6A0\]\/20:hover {
+      --tw-shadow-color: color-mix(in srgb, #20D6A0 20%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:shadow-\[\#20D6A0\]\/20:hover {
+        --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, #20D6A0 20%, transparent) var(--tw-shadow-alpha), transparent);
+      }
+    }
+    .hover\:shadow-\[\#20D6A0\]\/40:hover {
+      --tw-shadow-color: color-mix(in srgb, #20D6A0 40%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:shadow-\[\#20D6A0\]\/40:hover {
+        --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, #20D6A0 40%, transparent) var(--tw-shadow-alpha), transparent);
+      }
+    }
+    .hover\:shadow-\[\#32C8F5\]\/10:hover {
+      --tw-shadow-color: color-mix(in srgb, #32C8F5 10%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:shadow-\[\#32C8F5\]\/10:hover {
+        --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, #32C8F5 10%, transparent) var(--tw-shadow-alpha), transparent);
+      }
+    }
+    .hover\:shadow-\[\#32C8F5\]\/20:hover {
+      --tw-shadow-color: color-mix(in srgb, #32C8F5 20%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:shadow-\[\#32C8F5\]\/20:hover {
+        --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, #32C8F5 20%, transparent) var(--tw-shadow-alpha), transparent);
+      }
+    }
+    .hover\:shadow-\[\#9858F5\]\/20:hover {
+      --tw-shadow-color: color-mix(in srgb, #9858F5 20%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:shadow-\[\#9858F5\]\/20:hover {
+        --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, #9858F5 20%, transparent) var(--tw-shadow-alpha), transparent);
+      }
+    }
+    .hover\:shadow-\[\#FFB547\]\/20:hover {
+      --tw-shadow-color: color-mix(in srgb, #FFB547 20%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:shadow-\[\#FFB547\]\/20:hover {
+        --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, #FFB547 20%, transparent) var(--tw-shadow-alpha), transparent);
+      }
     }
   }
   .focus\:border:focus {
