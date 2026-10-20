@@ -16,9 +16,9 @@ orders.forEach((order) => {
   });
 });
 revenue.innerText = Number(totalPrice).toLocaleString();
+totalOrders.innerText = orders.length;
 
 
-// total-price
 // revpercent-res
 // total-orders
 // average-value
