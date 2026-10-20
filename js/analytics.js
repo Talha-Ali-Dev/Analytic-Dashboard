@@ -1,9 +1,12 @@
 import { orders } from "./data.js";
 
-orders.forEach((order) => {
-  console.log(order);
-});
+// orders.forEach((order) => {
+//   // console.log(order);
+// });
 
+const totalRevenue = orders.map((order)=>{
+  
+})
 
 // total-price
 // revpercent-res

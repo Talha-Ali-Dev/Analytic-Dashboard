@@ -65,17 +65,27 @@
         </div>
 
         <div class="col-span-3 px-4 flex flex-col gap-4">
+          
           <div
-            class="bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-2 flex gap-4"
+            class="flex justify-between border-b border-[#263050] pb-6"
           >
-            <img src="assets/icons/search (2).png" alt="" width="20" />
-            <input
-              type="search"
-              name=""
-              id=""
-              placeholder="Search Anything....."
-              class="w-full focus:outline-none focus:ring-0"
-            />
+            <div class="bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-2 flex gap-4">
+              <img src="assets/icons/search (1).png" alt="" width="" />
+              <input
+                type="search"
+                name=""
+                id=""
+                placeholder="Search Anything..."
+                class="w-full focus:outline-none focus:ring-0 text-sm"
+              />
+            </div>
+
+            <div
+              class="size-10 bg-[#18243A] rounded-full backdrop:backdrop-blur-2xl border border-[#263050] shadow-2xl flex justify-center items-center"
+            >
+              <img src="assets/icons/bell.png" alt="" width="20"/>
+            </div>
+
           </div>
 
           <div class="info">
@@ -86,10 +96,9 @@
           </div>
 
           <div class="details grid grid-cols-1 lg:grid-cols-4 gap-4">
-
             <!-- Total Revenue  -->
             <div
-              class="bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-4 flex flex-col gap-4"
+              class="bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-4 flex flex-col gap-4 hover:border-b-[#20D6A0]"
             >
               <div class="flex justify-start items-center gap-4">
                 <div
@@ -176,7 +185,7 @@
 
             <!-- Total Orders  -->
             <div
-              class="bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-4 flex flex-col gap-4"
+              class="bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-4 flex flex-col gap-4 hover:border-b-[#9858F5]"
             >
               <div class="flex justify-start items-center gap-4">
                 <div
@@ -269,7 +278,7 @@
 
             <!-- Average Order Value  -->
             <div
-              class="bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-4 flex flex-col gap-4"
+              class="bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-4 flex flex-col gap-4 hover:border-b-[#32C8F5]"
             >
               <div class="flex justify-start items-center gap-4">
                 <div
@@ -362,7 +371,7 @@
 
             <!-- Unique Customers  -->
             <div
-              class="bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-4 flex flex-col gap-4"
+              class="bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-4 flex flex-col gap-4 hover:border-b-[#FFB547]"
             >
               <div class="flex justify-start items-center gap-4">
                 <div
@@ -450,6 +459,99 @@
                 </div>
 
                 <div class="text-[#B8C5DA]">from last period</div>
+              </div>
+            </div>
+
+            <!-- Top Products & Total Orders -->
+            <div class="col-span-4 grid grid-cols-1 lg:grid-cols-3 gap-4">
+              <!-- Top Selling Products  -->
+              <div
+                class="bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-4 flex flex-col gap-4"
+              >
+                <div class="flex justify-between">
+                  <div>
+                    <h3 class="text-white text-[16px]">Top Selling Products</h3>
+                  </div>
+
+                  <div>
+                    <p class="text-[#9858F5] text-sm cursor-pointer">
+                      View All
+                    </p>
+                  </div>
+                </div>
+
+                <div class="products-details">
+                  <div
+                    class="flex justify-between text-xs py-1 border-b border-[#263050]"
+                  >
+                    <div>
+                      <p class="text-[#B8C5DA]">#</p>
+                    </div>
+
+                    <div>
+                      <p class="text-[#B8C5DA]">Product</p>
+                    </div>
+
+                    <div>
+                      <p class="text-[#B8C5DA]">Total Sold</p>
+                    </div>
+
+                    <div>
+                      <p class="text-[#B8C5DA]">Renvenue</p>
+                    </div>
+                  </div>
+
+                  <div class="rop-products-block"></div>
+                </div>
+              </div>
+
+              <!-- Recent Orders  -->
+              <div
+                class="col-span-2 bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-4 flex flex-col gap-4"
+              >
+                <div class="flex justify-between">
+                  <div>
+                    <h3 class="text-white text-[16px]">Recent Orders</h3>
+                  </div>
+
+                  <div>
+                    <p class="text-[#9858F5] text-sm cursor-pointer">
+                      View All
+                    </p>
+                  </div>
+                </div>
+
+                <div class="recent-orders-details">
+                  <div
+                    class="flex justify-between text-xs py-1 border-b border-[#263050]"
+                  >
+                    <div>
+                      <p class="text-[#B8C5DA]">#</p>
+                    </div>
+
+                    <div>
+                      <p class="text-[#B8C5DA]">Customer</p>
+                    </div>
+
+                    <div>
+                      <p class="text-[#B8C5DA]">Product</p>
+                    </div>
+
+                    <div>
+                      <p class="text-[#B8C5DA]">Amount</p>
+                    </div>
+
+                    <div>
+                      <p class="text-[#B8C5DA]">Status</p>
+                    </div>
+
+                    <div>
+                      <p class="text-[#B8C5DA]">Date</p>
+                    </div>
+                  </div>
+
+                  <div class="recent-order-block"></div>
+                </div>
               </div>
             </div>
           </div>
