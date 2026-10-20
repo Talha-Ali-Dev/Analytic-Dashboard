@@ -1,18 +1,441 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./src/output.css">
-</head>
+  <body class="bg-[#080D19]">
+    <section class="p-10">
+      <div class="grid grid-cols-1 lg:grid-cols-4 text-white">
+        <div
+          class="w-full h-screen bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-4 flex flex-col gap-4"
+        >
+          <div
+            class="dash-logo text-lg lg:text-2xl flex justify-start items-center gap-2"
+          >
+            <div
+              class="p-2 bg-[#18243A] rounded-xl backdrop:backdrop-blur-2xl border border-[#263050] shadow-2xl"
+            >
+              <img src="assets/icons/analysis.png" alt="" />
+            </div>
+            <div>
+              <span> Dahsboard</span>
+              <span class="text-sm text[#B8C5DA] block">Sales Analytics</span>
+            </div>
+          </div>
 
-<body>
-  <div class="object"></div>
+          <div
+            class="p-2 bg-[#18243A] rounded-xl backdrop:backdrop-blur-2xl border border-[#263050] shadow-2xl flex gap-2 text-[#B8C5DA] cursor-pointer hover:text-white"
+            id="dahsboard"
+          >
+            <span><img src="assets/icons/home.png" alt="" width="20" /></span>
+            <span>Dahsboard</span>
+          </div>
 
-<!-- here we go -->
-  <script type="module" src="js/analytics.js"></script>
-</body>
+          <div
+            class="p-2 rounded-xl backdrop:backdrop-blur-2xl shadow-2xl flex gap-2 text-[#B8C5DA] cursor-pointer hover:text-white"
+            id="reports"
+          >
+            <span><img src="assets/icons/graph.png" alt="" width="20" /></span>
+            <span>Reports</span>
+          </div>
 
+          <div
+            class="p-2 rounded-xl backdrop:backdrop-blur-2xl shadow-2xl flex gap-2 text-[#B8C5DA] cursor-pointer hover:text-white"
+            id="products"
+          >
+            <span
+              ><img src="assets/icons/3d-cube.png" alt="" width="20"
+            /></span>
+            <span>Products</span>
+          </div>
+
+          <div
+            class="p-2 rounded-xl backdrop:backdrop-blur-2xl shadow-2xl flex gap-2 text-[#B8C5DA] cursor-pointer hover:text-white"
+            id="products"
+          >
+            <span
+              ><img src="assets/icons/shopping-cart.png" alt="" width="20"
+            /></span>
+            <span>Orders</span>
+          </div>
+        </div>
+
+        <div class="col-span-3 px-4 flex flex-col gap-4">
+          <div
+            class="bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-2 flex gap-4"
+          >
+            <img src="assets/icons/search (2).png" alt="" width="20" />
+            <input
+              type="search"
+              name=""
+              id=""
+              placeholder="Search Anything....."
+              class="w-full focus:outline-none focus:ring-0"
+            />
+          </div>
+
+          <div class="info">
+            <h1 class="text-2xl lg:text-3xl">Sales Analytic Dashboard</h1>
+            <p class="text-[#B8C5DA]">
+              Track your sales performance and get valuable insights
+            </p>
+          </div>
+
+          <div class="details grid grid-cols-1 lg:grid-cols-4 gap-4">
+            
+            <div
+              class="bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-4 flex flex-col gap-4"
+            >
+              <div class="flex justify-start items-center gap-4">
+                <div
+                  class="p-2 bg-radial from-transparent from-5% to-[#20D6A0] ring-1 ring-inset ring-white/10 rounded-xl backdrop:backdrop-blur-2xl border border-[#263050] shadow-2xl"
+                >
+                  <img src="assets/icons/dollar.png" alt="" />
+                </div>
+
+                <div class="text-[#B8C5DA]">Total Revenue</div>
+              </div>
+
+              <div class="flex justify-between items-end">
+                <div>
+                  <h3 class="text-2xl">
+                    <span>$</span>
+                    <span class="total-price"></span>
+                  </h3>
+                </div>
+
+                <div>
+                  <div
+                    class="relative h-13 w-[100px] overflow-hidden rounded-xl"
+                  >
+                    <!-- dot grid -->
+                    <div class="absolute inset-0 opacity-25"></div>
+
+                    <!-- chart -->
+                    <svg
+                      viewBox="0 0 200 100"
+                      preserveAspectRatio="none"
+                      class="absolute inset-0 h-full w-full"
+                    >
+                      <defs>
+                        <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+                          <stop
+                            offset="0%"
+                            stop-color="#20D6A0"
+                            stop-opacity="0.35"
+                          />
+                          <stop
+                            offset="100%"
+                            stop-color="#20D6A0"
+                            stop-opacity="0"
+                          />
+                        </linearGradient>
+                      </defs>
+
+                      <!-- area fill under the line -->
+                      <path
+                        d="M0,72 C20,72 30,52 50,52 S80,78 100,62 S130,18 150,28 S180,22 200,12 L200,100 L0,100 Z"
+                        fill="url(#area)"
+                      />
+
+                      <!-- glowing line -->
+                      <path
+                        d="M0,72 C20,72 30,52 50,52 S80,78 100,62 S130,18 150,28 S180,22 200,12"
+                        fill="none"
+                        stroke="#20D6A0"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        vector-effect="non-scaling-stroke"
+                        class="drop-shadow-[0_0_3px_#20D6A0]"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex gap-1 justify-start items-end">
+                <div class="revpercent text-[#20d6a0]">
+                  <span
+                    ><img
+                      src="assets/icons/up-arrow.png"
+                      alt=""
+                      width="12"
+                      class="inline"
+                  /></span>
+                  <span class="revpercent-res"></span>
+                </div>
+
+                <div class="text-[#B8C5DA]">from last period</div>
+              </div>
+            </div>
+
+            <div
+              class="bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-4 flex flex-col gap-4"
+            >
+              <div class="flex justify-start items-center gap-4">
+                <div
+                  class="p-2 bg-radial from-transparent from-5% to-[#9858F5] ring-1 ring-inset ring-white/10 rounded-xl backdrop:backdrop-blur-2xl border border-[#263050] shadow-2xl"
+                >
+                  <img src="assets/icons/dollar.png" alt="" />
+                </div>
+
+                <div class="text-[#B8C5DA]">Total Orders</div>
+              </div>
+
+              <div class="flex justify-between items-end">
+                <div>
+                  <h3 class="text-2xl">
+                    <span>$</span>
+                    <span class="total-orders"></span>
+                  </h3>
+                </div>
+
+                <div>
+                  <div
+                    class="relative h-13 w-[100px] overflow-hidden rounded-xl"
+                  >
+                    <!-- dot grid -->
+                    <div class="absolute inset-0 opacity-25"></div>
+
+                    <!-- chart -->
+                    <svg
+                      viewBox="0 0 200 100"
+                      preserveAspectRatio="none"
+                      class="absolute inset-0 h-full w-full"
+                    >
+                      <defs>
+                        <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+                          <stop
+                            offset="0%"
+                            stop-color="#20D6A0"
+                            stop-opacity="0.35"
+                          />
+                          <stop
+                            offset="100%"
+                            stop-color="#20D6A0"
+                            stop-opacity="0"
+                          />
+                        </linearGradient>
+                      </defs>
+
+                      <!-- area fill under the line -->
+                      <path
+                        d="M0,72 C20,72 30,52 50,52 S80,78 100,62 S130,18 150,28 S180,22 200,12 L200,100 L0,100 Z"
+                        fill="url(#area)"
+                      />
+
+                      <!-- glowing line -->
+                      <path
+                        d="M0,72 C20,72 30,52 50,52 S80,78 100,62 S130,18 150,28 S180,22 200,12"
+                        fill="none"
+                        stroke="#20D6A0"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        vector-effect="non-scaling-stroke"
+                        class="drop-shadow-[0_0_3px_#20D6A0]"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex gap-1 justify-start items-end">
+                <div class="revpercent text-[#20d6a0]">
+                  <span
+                    ><img
+                      src="assets/icons/up-arrow.png"
+                      alt=""
+                      width="12"
+                      class="inline"
+                  /></span>
+                  <span class="revpercent-res"></span>
+                </div>
+
+                <div class="text-[#B8C5DA]">from last period</div>
+              </div>
+            </div>
+
+            <div
+              class="bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-4 flex flex-col gap-4"
+            >
+              <div class="flex justify-start items-center gap-4">
+                <div
+                  class="p-2 bg-radial from-transparent from-5% to-[#20D6A0] ring-1 ring-inset ring-white/10 rounded-xl backdrop:backdrop-blur-2xl border border-[#263050] shadow-2xl"
+                >
+                  <img src="assets/icons/dollar.png" alt="" />
+                </div>
+
+                <div class="text-[#B8C5DA]">Total Revenue</div>
+              </div>
+
+              <div class="flex justify-between items-end">
+                <div>
+                  <h3 class="text-2xl">
+                    <span>$</span>
+                    <span class="total-price"></span>
+                  </h3>
+                </div>
+
+                <div>
+                  <div
+                    class="relative h-13 w-[100px] overflow-hidden rounded-xl"
+                  >
+                    <!-- dot grid -->
+                    <div class="absolute inset-0 opacity-25"></div>
+
+                    <!-- chart -->
+                    <svg
+                      viewBox="0 0 200 100"
+                      preserveAspectRatio="none"
+                      class="absolute inset-0 h-full w-full"
+                    >
+                      <defs>
+                        <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+                          <stop
+                            offset="0%"
+                            stop-color="#20D6A0"
+                            stop-opacity="0.35"
+                          />
+                          <stop
+                            offset="100%"
+                            stop-color="#20D6A0"
+                            stop-opacity="0"
+                          />
+                        </linearGradient>
+                      </defs>
+
+                      <!-- area fill under the line -->
+                      <path
+                        d="M0,72 C20,72 30,52 50,52 S80,78 100,62 S130,18 150,28 S180,22 200,12 L200,100 L0,100 Z"
+                        fill="url(#area)"
+                      />
+
+                      <!-- glowing line -->
+                      <path
+                        d="M0,72 C20,72 30,52 50,52 S80,78 100,62 S130,18 150,28 S180,22 200,12"
+                        fill="none"
+                        stroke="#20D6A0"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        vector-effect="non-scaling-stroke"
+                        class="drop-shadow-[0_0_3px_#20D6A0]"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex gap-1 justify-start items-end">
+                <div class="revpercent text-[#20d6a0]">
+                  <span
+                    ><img
+                      src="assets/icons/up-arrow.png"
+                      alt=""
+                      width="12"
+                      class="inline"
+                  /></span>
+                  <span class="revpercent-res"></span>
+                </div>
+
+                <div class="text-[#B8C5DA]">from last period</div>
+              </div>
+            </div>
+
+            <div
+              class="bg-[#131a2e] rounded-xl border border-[#263050] backdrop-blur-xl shadow-xl p-4 flex flex-col gap-4"
+            >
+              <div class="flex justify-start items-center gap-4">
+                <div
+                  class="p-2 bg-radial from-transparent from-5% to-[#20D6A0] ring-1 ring-inset ring-white/10 rounded-xl backdrop:backdrop-blur-2xl border border-[#263050] shadow-2xl"
+                >
+                  <img src="assets/icons/dollar.png" alt="" />
+                </div>
+
+                <div class="text-[#B8C5DA]">Total Revenue</div>
+              </div>
+
+              <div class="flex justify-between items-end">
+                <div>
+                  <h3 class="text-2xl">
+                    <span>$</span>
+                    <span class="total-price"></span>
+                  </h3>
+                </div>
+
+                <div>
+                  <div
+                    class="relative h-13 w-[100px] overflow-hidden rounded-xl"
+                  >
+                    <!-- dot grid -->
+                    <div class="absolute inset-0 opacity-25"></div>
+
+                    <!-- chart -->
+                    <svg
+                      viewBox="0 0 200 100"
+                      preserveAspectRatio="none"
+                      class="absolute inset-0 h-full w-full"
+                    >
+                      <defs>
+                        <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+                          <stop
+                            offset="0%"
+                            stop-color="#20D6A0"
+                            stop-opacity="0.35"
+                          />
+                          <stop
+                            offset="100%"
+                            stop-color="#20D6A0"
+                            stop-opacity="0"
+                          />
+                        </linearGradient>
+                      </defs>
+
+                      <!-- area fill under the line -->
+                      <path
+                        d="M0,72 C20,72 30,52 50,52 S80,78 100,62 S130,18 150,28 S180,22 200,12 L200,100 L0,100 Z"
+                        fill="url(#area)"
+                      />
+
+                      <!-- glowing line -->
+                      <path
+                        d="M0,72 C20,72 30,52 50,52 S80,78 100,62 S130,18 150,28 S180,22 200,12"
+                        fill="none"
+                        stroke="#20D6A0"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        vector-effect="non-scaling-stroke"
+                        class="drop-shadow-[0_0_3px_#20D6A0]"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex gap-1 justify-start items-end">
+                <div class="revpercent text-[#20d6a0]">
+                  <span
+                    ><img
+                      src="assets/icons/up-arrow.png"
+                      alt=""
+                      width="12"
+                      class="inline"
+                  /></span>
+                  <span class="revpercent-res"></span>
+                </div>
+
+                <div class="text-[#B8C5DA]">from last period</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="js/analytics.js"></script>
+  </body>
 </html>
