@@ -8,3 +8,8 @@ orders.forEach((order) => {
 // total-price
 // revpercent-res
 // total-orders
+// average-value
+// avgorder-res
+// unique-customers
+// unqcus-res
+// totalorder-res
