@@ -354,9 +354,6 @@
   .border-\[\#263050\] {
     border-color: #263050;
   }
-  .border-\[neutral-800\] {
-    border-color: neutral-800;
-  }
   .border-neutral-50 {
     border-color: var(--color-neutral-50);
   }
@@ -374,9 +371,6 @@
   }
   .bg-\[\#080D19\] {
     background-color: #080D19;
-  }
-  .bg-\[\#111B2D\] {
-    background-color: #111B2D;
   }
   .bg-\[\#131a2e\] {
     background-color: #131a2e;
@@ -725,9 +719,6 @@
     border-style: var(--tw-border-style);
     border-width: 0px;
   }
-  .focus\:text-white:focus {
-    color: var(--color-white);
-  }
   .focus\:ring:focus {
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -739,9 +730,6 @@
   .focus\:outline-none:focus {
     --tw-outline-style: none;
     outline-style: none;
-  }
-  .active\:text-white:active {
-    color: var(--color-white);
   }
   @media (width >= 64rem) {
     .lg\:grid-cols-3 {

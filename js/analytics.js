@@ -6,6 +6,7 @@ import { orders } from "./data.js";
 
 const revenue = document.querySelector(".total-price");
 const totalOrders = document.querySelector(".total-orders");
+const averageOrder = document.querySelector(".average-value");
 
 let totalPrice = 0;
 orders.forEach((order) => {
@@ -17,6 +18,11 @@ orders.forEach((order) => {
 });
 revenue.innerText = Number(totalPrice).toLocaleString();
 totalOrders.innerText = orders.length;
+
+let averageValue = orders.filter((order)=> order.status === "completed")
+
+averageOrder.innerText = Math.round(totalPrice / averageValue.length);
+
 
 
 // revpercent-res
