@@ -8,6 +8,7 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-emerald-500: oklch(69.6% 0.17 162.48);
     --color-emerald-700: oklch(50.8% 0.118 165.612);
     --color-emerald-800: oklch(43.2% 0.095 166.913);
@@ -33,6 +34,7 @@
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --radius-sm: 0.25rem;
+    --radius-md: 0.375rem;
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
     --blur-xl: 24px;
@@ -257,8 +259,14 @@
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+  .grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
   .flex-col {
     flex-direction: column;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
@@ -296,6 +304,9 @@
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
+  .rounded-md {
+    border-radius: var(--radius-md);
+  }
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
@@ -310,6 +321,9 @@
   .border-\[\#263050\] {
     border-color: #263050;
   }
+  .bg-\[\#20d6a0\]\/10 {
+    background-color: color-mix(in oklab, #20d6a0 10%, transparent);
+  }
   .bg-\[\#080D19\] {
     background-color: #080D19;
   }
@@ -318,6 +332,18 @@
   }
   .bg-\[\#18243A\] {
     background-color: #18243A;
+  }
+  .bg-\[\#ffb547\]\/10 {
+    background-color: color-mix(in oklab, #ffb547 10%, transparent);
+  }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
+  }
+  .bg-red-500\/15 {
+    background-color: color-mix(in srgb, oklch(63.7% 0.237 25.331) 15%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-red-500) 15%, transparent);
+    }
   }
   .bg-radial {
     --tw-gradient-position: in oklab;
@@ -355,6 +381,12 @@
   .p-10 {
     padding: calc(var(--spacing) * 10);
   }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-2\.5 {
+    padding-inline: calc(var(--spacing) * 2.5);
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -363,6 +395,9 @@
   }
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
+  }
+  .text-center {
+    text-align: center;
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -391,6 +426,9 @@
   }
   .text-\[\#B8C5DA\] {
     color: #B8C5DA;
+  }
+  .text-\[\#ffb547\] {
+    color: #ffb547;
   }
   .text-white {
     color: var(--color-white);

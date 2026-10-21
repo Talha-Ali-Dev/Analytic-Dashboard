@@ -84,10 +84,50 @@ const productRows = products.map(([name, data], index) => {
 
 document.querySelector(".products-details").innerHTML += productRows;
 
+const allOrders = orders.map((order) => {
 
+  return `
+        <div class="grid grid-cols-6 gap-4 text-xs py-1 border-b border-[#263050]">
+            <div>
+                <p class="text-[#B8C5DA]">${order.id}</p>
+            </div>
+
+            <div>
+                <p class="text-[#B8C5DA]">${order.customer}</p>
+            </div>
+
+            <div>
+                <p class="text-[#B8C5DA]">${order.items.map((item) => item.name).join(", ")}</p>
+            </div>
+
+            <div>
+                <p class="text-[#B8C5DA]">${order.items.map((item) => item.price).join(", ")}</p>
+            </div>
+
+           <div class="order-status px-2 py-1 rounded-md text-center
+    ${order.status === "completed"
+      ? "bg-[#20d6a0]/10 text-[#20d6a0]"
+      : order.status === "pending"
+        ? "bg-[#ffb547]/10 text-[#ffb547]"
+        : "bg-red-500/15 text-white"
+    }">
+
+    <p>${order.status}</p>
+
+</div>
+
+            <div>
+                <p class="text-[#B8C5DA]">${order.date}</p>
+            </div>
+        </div>
+    `;
+}).join("");
+
+document.querySelector(".recent-orders-details").innerHTML += allOrders;
 
 
 // revpercent-res
 // avgorder-res
 // unqcus-res
 // totalorder-res
+// recent-orders-details
