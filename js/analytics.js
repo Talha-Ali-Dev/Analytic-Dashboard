@@ -39,7 +39,6 @@ uniqueCustomer.innerText = uniCustomer.length;
 
 // }, 0)
 
-// console.log(laptopTotalRevenue)
 
 const productStats = orders.reduce((stats, order) => {
   if (order.status !== "completed") {
